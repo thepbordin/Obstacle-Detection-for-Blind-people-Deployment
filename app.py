@@ -6,10 +6,9 @@ from io import *
 import glob
 from datetime import datetime
 import os
+import wget
 
-
-# parser = argparse.ArgumentParser()
-# parser.add_argument('--weights', nargs='+', type=str, default='yolov5m.pt')
+model_file = wget.download('https://archive.org/download/yoloTrained/yoloTrained.pt', out="models/")
 def imageInput(device, src):
     
     if src == 'Upload your own data.':
