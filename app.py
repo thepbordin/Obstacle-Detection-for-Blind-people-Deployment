@@ -7,8 +7,8 @@ import glob
 from datetime import datetime
 import os
 import wget
+import time
 
-model_file = wget.download('https://archive.org/download/yoloTrained/yoloTrained.pt', out="models/")
 def imageInput(device, src):
     
     if src == 'Upload your own data.':
@@ -115,5 +115,8 @@ if __name__ == '__main__':
     main()
 @st.cache
 def loadModel():
-    model = torch.hub.load('ultralytics/yolov5', 'custom', path='models/yoloTrained.pt', force_reload=True) 
+    start_dl = time.time()
+    model_file = wget.download('https://archive.org/download/yoloTrained/yoloTrained.pt', out="models/")
+    finished_dl = time.time()
+    print(f"Model Downloaded, ETA:{finished_dl-start_dl}")
 loadModel()
