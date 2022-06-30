@@ -101,7 +101,7 @@ def main():
     # -- End of Sidebar
 
     st.header('📦Obstacle Detection Model Demo')
-    st.subheader('👈🏽 Pick options from left-handed menu bar.')
+    st.subheader('👈🏽 Select the options')
     st.sidebar.markdown("https://github.com/thepbordin/Obstacle-Detection-for-Blind-people-Deployment")
     if option == "Image":    
         imageInput(deviceoption, datasrc)
