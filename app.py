@@ -93,7 +93,7 @@ def main():
     
         
                 
-    option = st.sidebar.radio("Select input type.", ['Image', 'Video'], disabled = False)
+    option = st.sidebar.radio("Select input type.", ['Image', 'Video'], disabled = True)
     if torch.cuda.is_available():
         deviceoption = st.sidebar.radio("Select compute Device.", ['cpu', 'cuda'], disabled = False, index=1)
     else:
