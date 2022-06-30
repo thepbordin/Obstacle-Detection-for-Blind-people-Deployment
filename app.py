@@ -100,8 +100,8 @@ def main():
         deviceoption = st.sidebar.radio("Select compute Device.", ['cpu', 'cuda'], disabled = True, index=0)
     # -- End of Sidebar
 
-    st.header('📦Obstacle Detection')
-    st.subheader('👈🏽 Select options left-haned menu bar.')
+    st.header('📦Obstacle Detection Model Demo')
+    st.subheader('👈🏽 Pick options from left-handed menu bar.')
     st.sidebar.markdown("https://github.com/thepbordin/Obstacle-Detection-for-Blind-people-Deployment")
     if option == "Image":    
         imageInput(deviceoption, datasrc)
